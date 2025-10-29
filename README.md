@@ -115,7 +115,7 @@ Some properties like population, terrain, or climate may show placeholders if th
 Films and residents are dynamically fetched for each planet.
 
 🎨 Screenshots
-<p align="center"> <img src="screenshots/star-wars-planets-screenshot.png" alt="Planet Details" width="700" /> </p>
+<p align="center"> <img src="/screenshots/star-wars-planets-screenshot.png" alt="Planet Details" width="700" /> </p>
 💻 Portfolio Showcase
 
 This project is not intended for public contribution. It serves as a portfolio piece to demonstrate:
