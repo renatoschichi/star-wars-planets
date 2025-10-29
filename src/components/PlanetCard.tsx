@@ -11,11 +11,11 @@ export default function PlanetCard({ name, climate, population, id }: PlanetCard
   return (
     <Link
       to={`/planet/${id}`}
-      className="block bg-gray-900 hover:bg-gray-800 border border-gray-800 rounded-xl p-5 transition-transform hover:-translate-y-1 hover:shadow-lg hover:shadow-yellow-500/10"
+      className="block bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-700 rounded-xl p-5 transition-transform hover:-translate-y-1 hover:shadow-lg hover:shadow-yellow-500/10"
     >
-      <h3 className="text-xl font-bold text-yellow-400 mb-2">{name}</h3>
-      <p className="text-gray-300"><strong>Climate:</strong> {climate}</p>
-      <p className="text-gray-300"><strong>Population:</strong> {population}</p>
+      <h3 className="text-xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">{name}</h3>
+      <p className="text-gray-800 dark:text-gray-200"><strong>Climate:</strong> {climate}</p>
+      <p className="text-gray-800 dark:text-gray-200"><strong>Population:</strong> {population}</p>
     </Link>
   )
 }

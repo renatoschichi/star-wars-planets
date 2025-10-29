@@ -32,18 +32,18 @@ export default function PlanetDetails() {
   if (loading || !planet) return <Loader />;
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 p-8">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100 p-8">
       <div className="max-w-4xl mx-auto">
         <Link
           to="/"
-          className="inline-block mb-6 text-yellow-400 hover:text-yellow-300 transition-colors"
+          className="inline-block mb-6 text-yellow-600 dark:text-yellow-400 hover:text-yellow-500 dark:hover:text-yellow-300 transition-colors"
         >
           ← Back to planets
         </Link>
 
-        <h1 className="text-4xl font-bold text-yellow-400 mb-4">{planet.name}</h1>
+        <h1 className="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-4">{planet.name}</h1>
 
-        <section className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 bg-gray-900 p-6 rounded-xl border border-gray-800">
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 bg-gray-200 dark:bg-gray-800 p-6 rounded-xl border border-gray-300 dark:border-gray-700">
           <div><strong>Climate:</strong> {planet.climate}</div>
           <div><strong>Gravity:</strong> {planet.gravity}</div>
           <div><strong>Population:</strong> {planet.population}</div>
@@ -52,7 +52,7 @@ export default function PlanetDetails() {
 
         <section className="mb-8">
           <h3 className="text-2xl font-semibold mb-2">Films</h3>
-          <ul className="list-disc list-inside text-gray-300">
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
             {planet.films.map((film, i) => (
               <li key={i}>{film}</li>
             ))}
@@ -62,7 +62,7 @@ export default function PlanetDetails() {
         <section>
           <h3 className="text-2xl font-semibold mb-4">Residents</h3>
           {residents.length === 0 ? (
-            <p className="text-gray-400 italic">No known residents.</p>
+            <p className="text-gray-500 dark:text-gray-400 italic">No known residents.</p>
           ) : (
             <div className="grid gap-4 sm:grid-cols-2">
               {residents.map((person, i) => (
