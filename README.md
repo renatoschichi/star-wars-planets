@@ -1,73 +1,131 @@
-# React + TypeScript + Vite
+🌌 Star Wars Planets
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Star Wars Planets is a modern React + TypeScript project that allows you to explore planets from the Star Wars universe. Using the SWAPI (Star Wars API), the app fetches planet data, displays detailed information, and lists residents with a clean, responsive, and dark-mode-ready interface.
 
-Currently, two official plugins are available:
+This project is built for portfolio purposes and demonstrates frontend skills with React, TypeScript, Tailwind CSS, Zustand, and Axios.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
 
-## React Compiler
+Planet Listing
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Browse all Star Wars planets in a responsive, paginated grid layout.
 
-## Expanding the ESLint configuration
+Search & Filter
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Quickly find planets by name with a live search input.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Planet Details
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Detailed information for each planet, including:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Climate, Gravity, Population, Terrain
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Films featuring the planet
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Residents with personal details (gender, hair, eyes, species, vehicles)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Resident Cards
+
+Clean card component to display each resident's attributes.
+
+Theme Toggle
+
+Switch between light and dark modes with state persisted in localStorage.
+
+Responsive & Accessible Design
+
+Fully responsive layouts using Tailwind CSS.
+
+Semantic HTML for better accessibility.
+
+Loading States
+
+Loader components displayed while fetching data from the API.
+
+🛠 Tech Stack
+
+Frontend Framework: React 19 + TypeScript
+
+State Management: Zustand
+
+Routing: React Router DOM
+
+HTTP Requests: Axios
+
+Styling: Tailwind CSS + PostCSS + Autoprefixer
+
+Testing: Jest
+
+Build Tool: Vite
+
+Linting: ESLint
+
+🚀 Getting Started
+
+Clone the repository
+
+git clone <your-repo-url>
+cd starwars-planets
+
+
+Install dependencies
+
+npm install
+
+
+Run the development server
+
+npm run dev
+
+
+Open the app
+
+Visit http://localhost:5173
+ in your browser.
+
+🔍 Usage
+
+Navigate to the home page to browse planets.
+
+Use the search bar to filter planets by name in real-time.
+
+Click on a planet to view detailed information and residents.
+
+Toggle between light and dark themes using the header switch.
+
+Navigate through pages using the pagination controls.
+
+🧩 Components Highlights
+
+PlanetCard – Displays planet summary with hover animations.
+
+PersonCard – Displays resident information including species and vehicles.
+
+Pagination – Dynamic pagination with highlighted current page.
+
+ThemeToggle – Switch between light and dark themes with persistence.
+
+⚡ Notes
+
+Data is fetched from SWAPI
+.
+
+Some properties like population, terrain, or climate may show placeholders if the API returns "unknown".
+
+Films and residents are dynamically fetched for each planet.
+
+🎨 Screenshots
+<p align="center"> <img src="screenshots/star-wars-planets-screenshot.png" alt="Planet Details" width="700" /> </p>
+💻 Portfolio Showcase
+
+This project is not intended for public contribution. It serves as a portfolio piece to demonstrate:
+
+Modern frontend development skills
+
+React + TypeScript + Tailwind CSS integration
+
+API consumption with Axios
+
+State management with Zustand
+
+Responsive and accessible UI design
