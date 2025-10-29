@@ -3,23 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import Loader from '../components/Loader';
 import PersonCard from '../components/PersonCard';
-
-interface Planet {
-  name: string;
-  climate: string;
-  gravity: string;
-  population: string;
-  terrain: string;
-  films: string[];
-  residents: string[];
-}
-
-interface Person {
-  name: string;
-  height: string;
-  mass: string;
-  gender: string;
-}
+import { Person, Planet } from '@/types/types';
 
 export default function PlanetDetails() {
   const { id } = useParams();
@@ -34,8 +18,8 @@ export default function PlanetDetails() {
 
       const residentData = await Promise.all(
         res.data.residents.map(async (url: string) => {
-          const personRes = await axios.get(url)
-          return personRes.data
+          const personRes = await axios.get(url);
+          return personRes.data;
         })
       )
       setResidents(residentData);
@@ -85,9 +69,11 @@ export default function PlanetDetails() {
                 <PersonCard
                   key={i}
                   name={person.name}
-                  hair={person.hair}
-                  mass={person.mass}
+                  hair={person.hair_color}  
+                  eyes={person.eye_color} 
                   gender={person.gender}
+                  species={person.species} 
+                  vehicles={[]}     
                 />
               ))}
             </div>

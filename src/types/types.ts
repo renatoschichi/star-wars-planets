@@ -1,10 +1,3 @@
-export type SWAPIListResponse<T> = {
-  count: number;
-  next: string | null;
-  previous: string | null;
-  results: T[];
-}
-
 export type Planet = {
   name: string;
   rotation_period: string;

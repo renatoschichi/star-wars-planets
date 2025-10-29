@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { Planet, Person, Film, Species, Vehicle } from '@/types/swapi';
+import { Planet, Person, Film, Species, Vehicle } from '@/types/types';
 
 const API_BASE_URL = 'https://swapi.dev/api';
 
-export interface PaginatedResponse<T> {
+interface PaginatedResponse<T> {
   count: number;
   next: string | null;
   previous: string | null;
